@@ -1,0 +1,80 @@
+:root {
+  --cls-bg: linear-gradient(#511da5, #0b0417);
+}
+
+html {
+  font-size: 1em;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 1.5;
+}
+body {
+  box-sizing: border-box;
+  background: var(--cls-bg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  color: lightgrey;
+  justify-content: center;
+}
+
+.Birthdaycake {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cake {
+  position: relative;
+}
+
+.torch {
+  position: absolute;
+  bottom: 130px;
+  left: -5px;
+}
+
+.button {
+  cursor: pointer;
+  background-color: #221926;
+  color: rgba(223, 26, 30, 0.8);
+  position: absolute;
+  top: 300px;
+  left: 30%;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 10px 50px;
+  transform: translateX(-25px);
+  border: 2px solid #ad92d9;
+  border-radius: 1.5rem;
+  transition: all 200ms linear 250ms;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 45px;
+  width: 50px;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background-color: orangered;
+  transition: transform 200ms ease-in-out 250ms;
+}
+
+.button:hover::after,
+.button:focus::after {
+  transform-origin: right;
+  transform: scaleX(1);
+}
+
+.button:hover,
+:focus {
+  background-color: #b53fe4;
+  color: #221926;
+}
